@@ -2,3 +2,11 @@ Langauge Timothy
 ----------------
 
 A Google Wave bot that removes bad language from waves
+
+To use, you just need to add the contact:
+
+ language-timothy@appspot.com
+
+and then add this contact as a participant in the conversation you would
+like monitoring.
+
