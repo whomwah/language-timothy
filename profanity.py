@@ -16,7 +16,7 @@ def replaceProfanity( text ):
   tmp = {} 
   for w in profanities: 
     w = w.split(':')
-    for m in re.finditer("[^\w+]?("+re.escape(w[0])+")[^\w+]?", text):
+    for m in re.finditer(re.escape(w[0]), text):
       key_str = m.start()
       if len(w) > 1:
         for wl in w[1].split(','):
@@ -39,4 +39,4 @@ if __name__ == '__main__':
   """
   print w.strip()
   for m in replaceProfanity(w): 
-    print m.group(1)[0] + '*'*(len(m.group(1))-2) + m.group(1)[len(m.group(1))-1] 
+    print m.group(0)[0] + '*'*(len(m.group(0))-2) + m.group(0)[len(m.group(0))-1] 
